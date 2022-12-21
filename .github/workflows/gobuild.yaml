@@ -23,5 +23,7 @@ jobs:
           ls -la
           ls -la /go
           go env
-          git config --global --add url."git@github.com:".insteadOf "https://github.com/"
+          git config --global url."https://${{ secrets.GITHUB_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
           go install github.com/predybalov/mysecret@latest
+
+
