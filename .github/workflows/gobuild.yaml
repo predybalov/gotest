@@ -18,7 +18,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v3.1.0
         
-      - name: build            
+      - name: build
         run: |
           echo $TOKEN
           pwd
@@ -27,4 +27,4 @@ jobs:
           go env
           git config --global url."https://$TOKEN@github.com/".insteadOf "https://github.com/"
           git remote -v
-          go install github.com/predybalov/mysecret@latest
+          GIT_TERMINAL_PROMPT=1 go install github.com/predybalov/mysecret@latest
