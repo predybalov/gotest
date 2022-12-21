@@ -21,4 +21,5 @@ jobs:
         run: |
           pwd
           ls -la
+          go env
           go get github.com/predybalov/mysecret
