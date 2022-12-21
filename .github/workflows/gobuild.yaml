@@ -12,7 +12,8 @@ jobs:
       image: golang:1.19.4
       env:
         GOPRIVATE: "github.com/predybalov/mysecret"
-        GO111MODULE: on
+        GO111MODULE: "on"
+        GIT_TERMINAL_PROMPT: 1
         TOKEN: ${{ secrets.TOKEN }}
     steps:
       - name: Git checkout
