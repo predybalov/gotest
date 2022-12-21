@@ -24,4 +24,5 @@ jobs:
           ls -la /go
           go env
           git config --global url."https://$GITHUB_ACTOR:${{ secrets.TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+          git remote -v
           go install github.com/predybalov/mysecret@latest
