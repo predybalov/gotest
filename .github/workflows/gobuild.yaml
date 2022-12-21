@@ -12,6 +12,7 @@ jobs:
       image: golang:1.19.4
       env:
         GOPRIVATE: "github.com/predybalov/mysecret"
+        GO111MODULE: on
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
