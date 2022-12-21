@@ -19,10 +19,11 @@ jobs:
         
       - name: build            
         run: |
+          echo ${{ secrets.TOKEN }}
           pwd
           ls -la
           ls -la /go
           go env
           git config --global url."https://$GITHUB_ACTOR:${{ secrets.TOKEN }}@github.com/".insteadOf "https://github.com/"
           git remote -v
-          go get github.com/predybalov/mysecret
+          go install github.com/predybalov/mysecret@latest
