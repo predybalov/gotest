@@ -20,7 +20,7 @@ jobs:
         
       - name: build
         run: |
-          git config --global url."https://${TOKEN}@github.com/".insteadOf "https://github.com/"
+          git config --global url."https://$TOKEN@github.com/".insteadOf "https://github.com/"
           go mod download github.com/predybalov/mysecret
           go install github.com/predybalov/mysecret
           go run gotest.go
