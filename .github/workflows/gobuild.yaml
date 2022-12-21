@@ -13,17 +13,18 @@ jobs:
       env:
         GOPRIVATE: "github.com/predybalov/mysecret"
         GO111MODULE: on
+        TOKEN: ${{ secrets.TOKEN }}
     steps:
       - name: Git checkout
         uses: actions/checkout@v3.1.0
         
       - name: build            
         run: |
-          echo ${{ secrets.TOKEN }}
+          echo $TOKEN
           pwd
           ls -la
           ls -la /go
           go env
-          git config --global url."https://$GITHUB_ACTOR:${{ secrets.TOKEN }}@github.com/".insteadOf "https://github.com/"
+          git config --global url."https://$TOKEN@github.com/".insteadOf "https://github.com/"
           git remote -v
           go install github.com/predybalov/mysecret@latest
