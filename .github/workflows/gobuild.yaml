@@ -8,11 +8,11 @@ jobs:
   first-job:
     name: gobuild
     runs-on: ubuntu-22.04
-      container:
-        image: golang:1.19.4
-        steps:
-          - name: build
-            env:
-              GOPRIVATE: "github.com/predybalov/mysecret"
-            run: |
-              go get github.com/predybalov/mysecret
+    container:
+      image: golang:1.19.4
+      env:
+        GOPRIVATE: "github.com/predybalov/mysecret"
+    steps:
+      - name: build            
+        run: |
+          go get github.com/predybalov/mysecret
