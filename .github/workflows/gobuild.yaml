@@ -2,7 +2,7 @@ name: gobuild testing
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   first-job:
