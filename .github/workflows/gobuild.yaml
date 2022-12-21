@@ -19,6 +19,7 @@ jobs:
         
       - name: build            
         run: |
+          echo $GITHUB_CONTEXT
           pwd
           ls -la
           ls -la /go
