@@ -22,4 +22,4 @@ jobs:
           pwd
           ls -la
           go env
-          go get github.com/predybalov/mysecret
+          go install github.com/predybalov/mysecret
