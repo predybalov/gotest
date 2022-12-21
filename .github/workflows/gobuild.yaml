@@ -1,4 +1,4 @@
-name: gobuild test
+name: gobuild testing
 
 on:
   push:
