@@ -19,10 +19,9 @@ jobs:
         
       - name: build            
         run: |
-          echo $GITHUB_ACTOR
           pwd
           ls -la
           ls -la /go
           go env
-          git config --global url."https://predybalov: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@github.com/".insteadOf "https://github.com/"
+          git config --global url."https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
           go install github.com/predybalov/mysecret@latest
