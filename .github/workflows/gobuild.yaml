@@ -23,5 +23,5 @@ jobs:
           ls -la
           ls -la /go
           go env
-          git config --global url."https://$GITHUB_ACTOR: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@github.com/".insteadOf "https://github.com/"
+          git config --global url."https://predybalov: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@github.com/".insteadOf "https://github.com/"
           go install github.com/predybalov/mysecret@latest
