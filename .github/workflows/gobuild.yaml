@@ -23,4 +23,4 @@ jobs:
           ls -la
           ls -la /go
           go env
-          go install github.com/predybalov/mysecret
+          go install github.com/predybalov/mysecret@latest
