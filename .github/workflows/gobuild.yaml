@@ -13,6 +13,9 @@ jobs:
       env:
         GOPRIVATE: "github.com/predybalov/mysecret"
     steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+        
       - name: build            
         run: |
           pwd
