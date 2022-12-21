@@ -15,4 +15,6 @@ jobs:
     steps:
       - name: build            
         run: |
+          pwd
+          ls -la
           go get github.com/predybalov/mysecret
