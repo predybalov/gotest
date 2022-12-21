@@ -20,5 +20,8 @@ jobs:
         
       - name: build
         run: |
+          whoami
+          printf "machine github.com\nlogin ${GITHUB_ACTOR}\npassword ${ACCESS_TOKEN_PWD}\n >> /root/.netrc
+          chmod 600 /root/.netrc
           git config --global url."https://$TOKEN@github.com/".insteadOf "https://github.com/"
           go install github.com/predybalov/mysecret@latest
