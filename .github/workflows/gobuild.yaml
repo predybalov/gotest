@@ -21,7 +21,8 @@ jobs:
       - name: build
         run: |
           whoami
-          printf "machine github.com\nlogin ${GITHUB_ACTOR}\npassword ${TOKEN}" >> /root/.netrc
+          printf "machine github.com\nlogin ${GITHUB_ACTOR}\npassword ${TOKEN}\n\nmachine api.github.com\nlogin ${GITHUB_ACTOR}\npassword ${TOKEN}\n" >> /root/.netrc
           chmod 600 /root/.netrc
+          cat /root/.netrc
           git config --global url."https://$TOKEN@github.com/".insteadOf "https://github.com/"
           go install github.com/predybalov/mysecret@latest
